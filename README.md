@@ -5,7 +5,7 @@
   </a>
 </p>
 
-Welcome to my portfolio of projects! I am a passionate backend engineer dedicated to creating robust and efficient software solutions. This portfolio showcases a selection of projects that demonstrate my skills, creativity, and problem-solving abilities in the field of backend development.
+Welcome to my portfolio of projects! Here I showcases a selection of projects that demonstrate my skills, creativity, and problem-solving abilities in the field of backend development.
 
 ## Table of Contents
 
