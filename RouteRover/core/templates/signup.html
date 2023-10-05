@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="column is-4 is-offset-4">
+    <h3 class="title">Sign Up</h3>
+    <div class="box">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="notification is-danger">
+            {{ messages[0] }}. Refresh <a href="{{ url_for('auth.signup') }}">signup page</a>.
+        </div>
+        {% endif %}
+        {% endwith %}
+        <form method="POST" action="/auth/signup">
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="username" placeholder="Username" autofocus=""
+                        required>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="email" name="email" placeholder="Email" autofocus="" required>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="first_name" placeholder="First Name" autofocus=""
+                        required>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="last_name" placeholder="Last Name" autofocus=""
+                        required>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="password" name="password" placeholder="Password" required
+                        aria-describedby="password-requirements">
+                </div>
+            </div>
+
+            <!-- Display password requirements -->
+            <div id="password-requirements" class="password-requirements">
+                <p class="help"><b>Password Requirements:</b></p>
+                <ul class="password-requirements">
+                    <li>At least 8 characters</li>
+                    <li>At least one uppercase letter</li>
+                    <li>At least one lowercase letter</li>
+                    <li>At least one digit</li>
+                    <li>At least one special character (!@#$%^&*()_-+=<>?/[]{}|)</li>
+                </ul>
+            </div>
+
+            <button class="button is-block is-info is-large is-fullwidth">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
